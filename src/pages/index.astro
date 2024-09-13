@@ -1,16 +1,176 @@
 ---
-
+import Icon from "../components/Icon.astro";
+import "@fontsource/berkshire-swash";
+import "@fontsource-variable/dm-sans";
+import "@fontsource-variable/playwrite-fr-moderne";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="Akid Affian's portfolio website. Akid is a Junior Fullstack Developer, passionate about building web
+				applications that just work."
+		/>
+		<title>Akid Affian Portfolio - Home</title>
+		<style>
+			.berkshire-swash {
+				font-family: "Berkshire Swash", cursive;
+			}
+			.text-stroke-white {
+				color: white;
+				-webkit-text-stroke: 1px black;
+				text-stroke: 1px black;
+
+				-webkit-text-stroke: 0.6px black;
+				text-stroke: 0.6px black;
+			}
+			.dm-sans {
+				font-family: "DM Sans Variable", sans-serif;
+				font-weight: 300;
+			}
+			.playwrite {
+				font-family: "Playwrite FR Moderne Variable", cursive;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="text-center flex items-center justify-center">
+			<h1
+				class="berkshire-swash text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight flex items-center mt-10"
+			>
+				<span class="text-stroke-white">Akid</span>
+				<span class="ml-2 text-[#292420]">Affian</span>
+				<Icon name="bomb" size={64} rotation={10} class="ml-6" />
+			</h1>
+		</div>
+		<div
+			class="text-center flex items-center justify-center max-w-4xl mx-auto"
+		>
+			<p class="dm-sans text-wrap mt-8 text-xl md:text-2xl p-2">
+				Junior Fullstack Developer, passionate about building web
+				applications that just work. I love learning new things and
+				focus on delivering meaningful products.
+			</p>
+		</div>
+
+		<div class="flex justify-center items-center mt-10">
+			<h2
+				class="playwrite md:text-2xl text-xl w-full text-left ml-6 md:ml-20"
+			>
+				My Projects
+			</h2>
+		</div>
+
+		<div class="flex justify-center items-center mt-5 p-2 mb-6">
+			<ul class="list-none text-left w-full max-w-4xl mx-auto">
+				<li class="dm-sans text-lg md:text-xl mt-4">
+					<a
+						href="https://github.com/Akid-Affian/namik-ddns"
+						class="text-[#0073e6] hover:underline font-bold dm-sans"
+						target="_blank"
+					>
+						Namik-DDNS (Open Source)
+					</a>
+					<p class="mt-2 text-base md:text-lg">
+						A complete system to create your own dynamic DNS server
+						like DuckDNS, DynDNS, and NO-IP, including a dashboard,
+						user system, and API.
+					</p>
+				</li>
+
+				<!-- Second project -->
+				<li class="dm-sans text-lg md:text-xl mt-8">
+					<a
+						href="https://inti-assignment.pages.dev/real-valuator.zip"
+						class="text-[#0073e6] hover:underline hover:text-[#0073e6] font-bold dm-sans"
+						target="_blank"
+						style="text-decoration-color: #0073e6;"
+					>
+						Land Evaluation Tool (Download Source Code)
+					</a>
+					<p class="mt-2 text-base md:text-lg">
+						A simple real estate valuation tool that helps to
+						provide insights on land valuation and uncover the true
+						value of the land.
+					</p>
+				</li>
+			</ul>
+		</div>
+		<footer class="mt-10 p-6 bg-gray-100 text-center">
+			<div class="dm-sans text-lg md:text-xl flex justify-around">
+				<!-- Hit me up section -->
+				<div>
+					<p class="font-bold mb-4">Hit me up:</p>
+					<ul class="list-none text-left">
+						<li>
+							➔ <a
+								href="https://www.linkedin.com/in/akid-affian-507188186/"
+								target="_blank"
+								class="text-[#0073e6] hover:underline"
+								>LinkedIn</a
+							>
+						</li>
+						<li class="mt-2">
+							➔ <a
+								href="https://github.com/Akid-Affian"
+								target="_blank"
+								class="text-[#0073e6] hover:underline">GitHub</a
+							>
+						</li>
+						<li class="mt-2">
+							➔ <a
+								href="mailto:mail@akid.my"
+								class="text-[#0073e6] hover:underline">Email</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Unmentioned skills section -->
+				<div>
+					<p class="font-bold mb-4">Unmentioned skills:</p>
+					<ul class="list-none text-left">
+						<li>
+							hiphop nerds: <span class="font-bold">expert</span>
+						</li>
+						<li class="mt-2">
+							mobile games: <span class="font-bold">expert</span>
+						</li>
+						<li class="mt-2">
+							wasting money on gardening: <span class="font-bold"
+								>intermediate</span
+							>
+						</li>
+
+						<li class="mt-2">
+							eating seafood: <span class="font-bold"
+								>intermediate</span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
